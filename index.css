@@ -1,0 +1,203 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+}
+#tituloEImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+h1 {
+    color: #FFD700;
+}
+#imgInici {
+    width: 900px;
+    height: auto;
+    background: #00000000;
+}
+
+/*Barra navegación*/
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #3A6D8C;
+    width: 100%;
+    margin-top: 3%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly; 
+    align-items: center;
+    margin: 0;
+    padding: 0 20px;  
+}
+
+nav li {
+    margin-right: 20px; 
+}
+
+nav li a {
+    display: block;
+    padding: 15px 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav li a:hover {
+    background-color: #16caea;
+    color: #ffffff;
+}
+
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+section>h2 {
+    color: #FFD700;
+    text-decoration: underline;
+}
+#segundoParrafo>h2 {
+    text-align: right;
+}
+#finalMain {
+    text-align: center;
+}
+#finalMain>div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#fletxaCapAvall {
+    color: white;
+    max-height: 180px;
+    height: auto;
+}
+#boton {
+    width: 10%;
+    height: auto;
+    padding: 20px;
+    background: #3C9DD1;
+    color: #FFD700;
+    border-color: #232323;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+}
+#boton:hover {
+    color: black;
+    background-color: #ffffff; 
+}
+#parrafoCursoPago {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Footer */
+
+footer {
+    background-color: #003366;            
+    padding: 20px 10%;                    
+    text-align: center;                   
+    border-top: 2px solid #3A6D8C; 
+    margin: 0%;           
+    margin-top: 30px;    
+}
+
+footer p {
+    margin: 10px 0;                       
+}
+
+footer a {
+    color: #FFD700;                       
+    text-decoration: none;                
+    transition: color 0.3s;               
+}
+
+footer a:hover {
+    color: #ffffff;                       
+    text-decoration: underline;           
+}
+
+#imgRedes {
+    margin-top: 15px;                     
+}
+
+#imgRedes a {
+    margin: 0 10px;                       
+    display: inline-block;
+}
+
+#imgRedes img {
+    width: 30px;                          
+    height: auto;
+    filter: brightness(0) invert(1);      
+}
+
+/* Adaptabilidad para mobil */
+
+/* Estilos responsive para pantallas de 768px o menos */
+@media screen and (max-width: 768px) {
+    /* Ajusta la imagen principal para que se adapte al ancho de la pantalla */
+    #imgInici {
+        width: 100%;
+        max-width: 500px; /* Limita el tamaño máximo para que no se vea demasiado grande */
+    }
+
+    /* Reduce los márgenes en el main para aprovechar más espacio */
+    main {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+     /* Mantener la disposición horizontal y reducir el espacio */
+    nav ul {
+        flex-direction: row;       /* Mantiene los elementos en fila */
+        justify-content: space-around; /* Espacia los elementos de forma equitativa */
+        padding: 0 10px;           /* Reduce el padding horizontal */
+        flex-wrap: wrap;           /* Permite que se ajusten en dos líneas si es muy estrecho */
+    }
+    
+    nav li {
+        margin: 5px;              /* Reduce la separación entre elementos */
+    }
+    
+    nav li a {
+        padding: 8px 5px;         /* Menos padding para reducir la altura */
+        font-size: 14px;          /* Disminuye ligeramente el tamaño de la fuente */
+    }
+
+    /* Ajusta el botón para que tenga un tamaño adecuado en móviles */
+    #boton {
+        width: 70%;         /* Aumenta el ancho relativo para que sea más fácil de tocar */
+        padding: 15px;
+        font-size: 18px;
+    }
+}

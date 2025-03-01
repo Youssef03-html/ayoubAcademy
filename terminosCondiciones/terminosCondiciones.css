@@ -1,0 +1,176 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/*Barra navegación*/
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #3A6D8C;
+    width: 100%;
+    margin-top: 3%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly; 
+    align-items: center;
+    margin: 0;
+    padding: 0 20px;  
+}
+
+nav li {
+    margin-right: 20px; 
+}
+
+nav li a {
+    display: block;
+    padding: 15px 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav li a:hover {
+    background-color: #16caea;
+    color: #ffffff;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+}
+h1 {
+    color: #FFD700;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+h2 {
+    color: #FFD700;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #003366;            
+    padding: 20px 10%;                    
+    text-align: center;                   
+    border-top: 2px solid #3A6D8C; 
+    margin: 0%;           
+    margin-top: 30px;    
+}
+footer p {
+    margin: 10px 0;                       
+}
+footer a {
+    color: #FFD700;                       
+    text-decoration: none;                
+    transition: color 0.3s;               
+}
+
+footer a:hover {
+    color: #ffffff;                       
+    text-decoration: underline;           
+}
+
+#imgRedes {
+    margin-top: 15px;                     
+}
+
+#imgRedes a {
+    margin: 0 10px;                       
+    display: inline-block;
+}
+
+#imgRedes img {
+    width: 30px;                          
+    height: auto;
+    filter: brightness(0) invert(1);      
+}
+/* Adaptaciones para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Reducir márgenes y padding */
+    main {
+        margin: 5% 5%;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav li {
+        margin: 5px;
+    }
+    
+    nav li a {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+    
+    /* Reducir tamaño de títulos si es necesario */
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    /* Ajuste de las secciones para mayor legibilidad */
+    main section {
+        padding: 0 5px;
+        font-size: 0.95em;
+    }
+    
+    /* Footer: ajustar padding */
+    footer {
+        padding: 20px 5%;
+    }
+    
+    #imgRedes a {
+        margin: 0 5px;
+    }
+    
+    #imgRedes img {
+        width: 25px;
+    }
+}
+
+/* Para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    nav li a {
+        padding: 8px 4px;
+        font-size: 13px;
+    }
+    
+    header h1 {
+        font-size: 1.6em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    main section {
+        font-size: 0.9em;
+    }
+}

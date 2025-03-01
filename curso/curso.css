@@ -1,0 +1,321 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/*Barra navegación*/
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #3A6D8C;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly; 
+    align-items: center;
+    margin: 0;
+    padding: 0 20px;  
+}
+
+nav li {
+    margin-right: 20px; 
+}
+
+nav li a {
+    display: block;
+    padding: 15px 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav li a:hover {
+    background-color: #16caea;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4%;
+}
+header>div {
+    box-sizing: border-box;
+    width: 80%;
+    text-align: left;
+}
+h1 {
+    color: #FFD700;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*
+main>div {
+    box-sizing: border-box;
+    width: 80%;
+}
+    */
+main>div>h1 {
+    margin-bottom: 5%;
+    text-align: center;
+}
+main>div>p {
+    font-size:large;
+}
+#parrafoPreFases {
+    margin-bottom: 4%;
+}
+h2 {
+    color: #FFD700;
+}
+img {
+    height: 400px;
+    width: auto;    
+}
+section {
+    margin: 2%;
+}
+.seccionIzquierda {
+    position: relative;
+    right: 10%;
+}
+.seccionDerecha {
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#textoPostFases {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    width: 60%;
+}
+#testigos {
+    box-sizing: border-box;
+    width: 40%;
+    text-align: center;
+}
+#videosTestigos {
+    display: flex;
+    gap: 10px;
+    background-color: #3A6D8C;
+    padding: 10px;
+}
+#videosTestigos > a {
+    flex: 1;               
+    display: block;        
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+#videosTestigos > a:hover {
+    background-color: #16caea;
+}
+iframe {
+    margin: 5%;
+    width: auto;
+    height: 400px;
+}
+#ultimoParrafo {
+    margin-top: 6%;
+    margin-bottom: 6%;
+    text-align: center  ;
+}
+#dos {
+    margin-bottom: 5%;
+}
+#cursoCompraVenta {
+    text-align: left;
+    width: 70%;
+}
+#cursoRedesSociales {
+    width: 70%;
+}
+#botonContacto {
+    display: inline-block; /* Permite que respete márgenes verticales */
+    width: 25%;
+    padding: 20px;
+    margin-top: 20px; /* Ajusta este valor según lo que necesites */
+    background: #3C9DD1;
+    color: #FFD700;
+    border: 1px solid #232323;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;  
+}
+#botonContacto:hover {
+    color: black;
+    background-color: #ffffff; 
+}
+/* Footer */
+
+footer {
+    background-color: #003366;            
+    padding: 20px 10%;                    
+    text-align: center;                   
+    border-top: 2px solid #3A6D8C; 
+    margin: 0%;           
+    margin-top: 30px;    
+}
+
+footer p {
+    margin: 10px 0;                       
+}
+
+footer a {
+    color: #FFD700;                       
+    text-decoration: none;                
+    transition: color 0.3s;               
+}
+
+footer a:hover {
+    color: #ffffff;                       
+    text-decoration: underline;           
+}
+
+#imgRedes {
+    margin-top: 15px;                     
+}
+
+#imgRedes a {
+    margin: 0 10px;                       
+    display: inline-block;
+}
+
+#imgRedes img {
+    width: 30px;                          
+    height: auto;
+    filter: brightness(0) invert(1);      
+}
+
+/* Adaptaciones para dispositivos con ancho máximo de 768px */
+@media (max-width: 768px) {
+    /* Navegación: si es necesario, se organizan en columna */
+       /* Mantener la disposición horizontal y reducir el espacio */
+       nav ul {
+        flex-direction: row;       /* Mantiene los elementos en fila */
+        justify-content: space-around; /* Espacia los elementos de forma equitativa */
+        padding: 0 10px;           /* Reduce el padding horizontal */
+        flex-wrap: wrap;           /* Permite que se ajusten en dos líneas si es muy estrecho */
+    }
+    
+    nav li {
+        margin: 5px;              /* Reduce la separación entre elementos */
+    }
+    
+    nav li a {
+        padding: 8px 5px;         /* Menos padding para reducir la altura */
+        font-size: 14px;          /* Disminuye ligeramente el tamaño de la fuente */
+    }
+
+    /* Header: reducir márgenes y tamaños de fuente */
+    header h1 {
+        font-size: 1.8em;
+        padding: 0 10px;
+    }
+    header > div {
+        width: 90%;
+    }
+
+    /* Main: ajustar el padding general */
+    main {
+        padding: 0 10px;
+    }
+    /* Para contenedores dentro del main, utilizar 100% de ancho */
+    main > div {
+        width: 100%;
+    }
+
+    /* Ajustar tamaño de los párrafos */
+    #parrafoPreFases, main > div > p {
+        font-size: 1em;
+    }
+
+    /* Imágenes: hacerlas responsivas */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Secciones de fases: quitar posicionamiento relativo y centrar contenido */
+    .seccionIzquierda,
+    .seccionDerecha {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Contenedores específicos: ampliar ancho para mayor legibilidad */
+    #textoPostFases,
+    #testigos,
+    #cursoCompraVenta,
+    #cursoRedesSociales {
+        width: 90%;
+    }
+
+    /* Videos Testigos: organizar los enlaces en columna */
+    #videosTestigos {
+        flex-direction: column;
+    }
+
+    /* Iframe: ocupar el 100% del contenedor y ajustar altura */
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Botón de contacto: hacerlo más grande y con mayor ancho */
+    #botonContacto {
+        width: 80%;
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+/* Adaptaciones para dispositivos muy pequeños (ancho máximo 480px) */
+@media (max-width: 480px) {
+    nav li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    main > div > p {
+        font-size: 0.9em;
+    }
+}
+
